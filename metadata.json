@@ -1,0 +1,6 @@
+{
+  "name": "Las Vegas Sign Company",
+  "description": "Professional custom interior and exterior commercial signage services in Las Vegas, Nevada.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
