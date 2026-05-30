@@ -93,7 +93,7 @@ export default function QuoteModal({ isOpen, onClose, initialSignType = '' }: Qu
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 bg-black/60 backdrop-blur-xs"
+            className="fixed inset-0 bg-black/60 backdrop-blur-sm"
             id="quote-modal-backdrop"
           />
 
@@ -127,7 +127,7 @@ export default function QuoteModal({ isOpen, onClose, initialSignType = '' }: Qu
               {!isSuccess ? (
                 <form onSubmit={handleSubmit} className="space-y-6" id="quote-request-form">
                   <div className="bg-orange-50 border-l-4 border-orange-500 p-4 rounded-r-md">
-                    <p className="text-xs text-orange-850 leading-relaxed font-medium">
+                    <p className="text-xs text-orange-800 leading-relaxed font-medium">
                       🛠️ <span className="font-bold text-orange-950">Nationwide Shipping &amp; Compliance Guaranteed:</span> Everything we build is packaged with tailored mounting layouts and complies with your local zoning laws, sign codes, and structural wind-load requirements in all 50 US states.
                     </p>
                   </div>
@@ -263,7 +263,7 @@ export default function QuoteModal({ isOpen, onClose, initialSignType = '' }: Qu
                         </p>
                         <div className="max-h-32 overflow-y-auto space-y-1.5" id="uploaded-files-list">
                           {uploadedFiles.map((file, idx) => (
-                            <div key={idx} className="flex items-center justify-between bg-white px-2 py-1.5 rounded-sm border border-neutral-150 text-xs text-neutral-700">
+                            <div key={idx} className="flex items-center justify-between bg-white px-2 py-1.5 rounded-sm border border-neutral-200 text-xs text-neutral-700">
                               <div className="flex items-center gap-2 truncate">
                                 <FileText className="w-4 h-4 text-neutral-400 flex-shrink-0" />
                                 <span className="truncate">{file.name}</span>
@@ -288,7 +288,7 @@ export default function QuoteModal({ isOpen, onClose, initialSignType = '' }: Qu
                   </div>
 
                   {/* Submission Row */}
-                  <div className="flex items-center justify-between pt-4 border-t border-neutral-150">
+                  <div className="flex items-center justify-between pt-4 border-t border-neutral-200">
                     <div className="flex items-center gap-2 text-xs text-neutral-500 font-medium">
                       <Shield className="w-4 h-4 text-green-600" />
                       <span>Data protected with bank-grade security</span>
@@ -359,7 +359,7 @@ export default function QuoteModal({ isOpen, onClose, initialSignType = '' }: Qu
                     </button>
                     <button
                       onClick={onClose}
-                      className="px-6 py-2.5 bg-neutral-900 hover:bg-neutral-850 text-white font-bold uppercase tracking-widest text-xs rounded-md transition-all shadow-md"
+                      className="px-6 py-2.5 bg-neutral-900 hover:bg-neutral-800 text-white font-bold uppercase tracking-widest text-xs rounded-md transition-all shadow-md"
                       id="quote-success-close-btn"
                     >
                       Close Window

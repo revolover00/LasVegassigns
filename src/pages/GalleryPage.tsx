@@ -92,7 +92,7 @@ export default function GalleryPage() {
               placeholder="Search specs, categories..."
               value={portfolioSearch}
               onChange={(e) => setPortfolioSearch(e.target.value)}
-              className="w-full bg-white text-xs text-neutral-900 pl-9 pr-10 py-2.5 rounded-lg border border-neutral-250 focus:outline-hidden focus:border-orange-500 focus:ring-1 focus:ring-orange-500 transition-colors placeholder:text-neutral-405"
+              className="w-full bg-white text-xs text-neutral-900 pl-9 pr-10 py-2.5 rounded-lg border border-neutral-300 focus:outline-hidden focus:border-orange-500 focus:ring-1 focus:ring-orange-500 transition-colors placeholder:text-neutral-400"
               id="portfolio-search-input"
             />
             {portfolioSearch && (
@@ -108,7 +108,7 @@ export default function GalleryPage() {
 
         {/* Collapsible Departments Drawer / Categories */}
         <div className="mb-10 animate-none" id="portfolio-categories-container">
-          <div className="bg-white rounded-xl border border-neutral-200 p-4 mb-4 shadow-xs flex flex-col sm:flex-row justify-between items-center gap-4 transition-all hover:border-neutral-300">
+          <div className="bg-white rounded-xl border border-neutral-200 p-4 mb-4 shadow-sm flex flex-col sm:flex-row justify-between items-center gap-4 transition-all hover:border-neutral-300">
             <div className="flex items-center gap-3 text-left">
               <div className="p-3 bg-neutral-950 text-white rounded-lg flex items-center justify-center flex-shrink-0">
                 <Filter className="w-4 h-4 text-orange-500" />
@@ -168,7 +168,7 @@ export default function GalleryPage() {
                           }}
                           className={`flex items-center gap-3 p-3.5 text-xs font-bold uppercase tracking-normal rounded-lg transition-all duration-200 cursor-pointer border text-left ${
                             isSelected
-                              ? 'bg-orange-600 text-white shadow-md shadow-orange-600/10 border-orange-500 scale-102'
+                              ? 'bg-orange-600 text-white shadow-md shadow-orange-600/10 border-orange-500'
                               : 'bg-white text-neutral-700 hover:text-neutral-950 hover:bg-neutral-100 border-neutral-200'
                           }`}
                           id={`portfolio-tab-${cat.name.toLowerCase().replace(/\s+/g, '-')}`}
@@ -239,7 +239,7 @@ export default function GalleryPage() {
                   transition={{ duration: 0.35, ease: "easeInOut" }}
                   key={item.id}
                   onClick={() => setActivePortfolioItem(item)}
-                  className="group bg-white rounded-xl border border-neutral-150 overflow-hidden shadow-xs hover:shadow-2xl hover:shadow-orange-600/5 hover:border-orange-500/30 hover:-translate-y-2 transition-all duration-300 ease-out cursor-pointer flex flex-col"
+                  className="group bg-white rounded-xl border border-neutral-200 overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-orange-600/5 hover:border-orange-500/30 hover:-translate-y-2 transition-all duration-300 ease-out cursor-pointer flex flex-col"
                   id={`portfolio-card-${item.id}`}
                 >
                   <div className="relative aspect-4/3 overflow-hidden bg-neutral-900/95 flex-shrink-0 flex items-center justify-center border-b border-neutral-100">
@@ -345,7 +345,7 @@ export default function GalleryPage() {
 
               <div className="p-6 md:p-8 space-y-4 text-white text-left">
                 <div>
-                  <span className="text-[10px] font-bold text-orange-500 uppercase tracking-widest bg-orange-950/60 px-2 py-0.5 rounded-sm border border-orange-850 font-sans">
+                  <span className="text-[10px] font-bold text-orange-500 uppercase tracking-widest bg-orange-950/60 px-2 py-0.5 rounded-sm border border-orange-800 font-sans">
                     Featured Project Spec
                   </span>
                   <h4 className="text-xl font-display font-black uppercase tracking-wide text-white mt-1.5 leading-snug">
@@ -367,7 +367,7 @@ export default function GalleryPage() {
                 <div className="pt-4 flex justify-end gap-3 border-t border-neutral-900 font-sans">
                   <button
                     onClick={() => setActivePortfolioItem(null)}
-                    className="px-5 py-2.5 bg-neutral-900 border border-neutral-800 text-neutral-300 font-bold uppercase tracking-widest text-[11px] rounded-md hover:bg-neutral-850 cursor-pointer"
+                    className="px-5 py-2.5 bg-neutral-900 border border-neutral-800 text-neutral-300 font-bold uppercase tracking-widest text-[11px] rounded-md hover:bg-neutral-800 cursor-pointer"
                   >
                     Back to Showcase
                   </button>

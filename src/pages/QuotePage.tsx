@@ -162,7 +162,7 @@ export default function QuotePage() {
 
                 {/* Sign Specifications */}
                 <div className="space-y-4">
-                  <h4 className="text-xs font-black uppercase tracking-widest text-neutral-400 border-b border-neutral-150 pb-2">
+                  <h4 className="text-xs font-black uppercase tracking-widest text-neutral-400 border-b border-neutral-200 pb-2">
                     1. Select Sign Category
                   </h4>
                   <div>
@@ -172,7 +172,7 @@ export default function QuotePage() {
                     <select
                       value={selectedSignType}
                       onChange={(e) => setSelectedSignType(e.target.value)}
-                      className="w-full px-3 py-2.5 border border-neutral-350 rounded-md text-sm bg-neutral-50 font-bold focus:outline-hidden focus:border-orange-500 focus:ring-1 focus:ring-orange-500 text-neutral-800"
+                      className="w-full px-3 py-2.5 border border-neutral-300 rounded-md text-sm bg-neutral-50 font-bold focus:outline-hidden focus:border-orange-500 focus:ring-1 focus:ring-orange-500 text-neutral-800"
                     >
                       <option value="Aluminum Signs">Aluminum Signs</option>
                       <option value="Apartment Signs">Apartment Signs</option>
@@ -190,7 +190,7 @@ export default function QuotePage() {
 
                 {/* Contact Info */}
                 <div className="space-y-4">
-                  <h4 className="text-xs font-black uppercase tracking-widest text-neutral-400 border-b border-neutral-150 pb-2">
+                  <h4 className="text-xs font-black uppercase tracking-widest text-neutral-400 border-b border-neutral-200 pb-2">
                     2. Contact Information
                   </h4>
                   
@@ -259,7 +259,7 @@ export default function QuotePage() {
 
                 {/* Upload Files */}
                 <div className="space-y-4">
-                  <h4 className="text-xs font-black uppercase tracking-widest text-neutral-400 border-b border-neutral-150 pb-2">
+                  <h4 className="text-xs font-black uppercase tracking-widest text-neutral-400 border-b border-neutral-200 pb-2">
                     3. Upload Your Files (optional)
                   </h4>
                   <p className="text-[11px] text-neutral-500">
@@ -290,7 +290,7 @@ export default function QuotePage() {
                     <p className="text-xs font-bold text-neutral-700">
                       Drag &amp; Drop files here or <span className="text-orange-600 underline">Click to Browse</span>
                     </p>
-                    <p className="text-[10px] text-neutral-450 mt-1">
+                    <p className="text-[10px] text-neutral-400 mt-1">
                       Supports AI, EPS, PDF, DXF, PNG, JPG (Max 50MB total)
                     </p>
                   </div>
@@ -309,7 +309,7 @@ export default function QuotePage() {
                       </p>
                       <div className="max-h-32 overflow-y-auto space-y-1.5">
                         {uploadedFiles.map((file, idx) => (
-                          <div key={idx} className="flex items-center justify-between bg-white px-3 py-2 rounded-sm border border-neutral-150 text-xs text-neutral-700">
+                          <div key={idx} className="flex items-center justify-between bg-white px-3 py-2 rounded-sm border border-neutral-200 text-xs text-neutral-700">
                             <div className="flex items-center gap-2 truncate">
                               <FileText className="w-4 h-4 text-neutral-400 flex-shrink-0" />
                               <span className="truncate">{file.name}</span>
@@ -333,7 +333,7 @@ export default function QuotePage() {
                 </div>
 
                 {/* Submission Action */}
-                <div className="flex flex-col sm:flex-row items-center justify-between pt-6 border-t border-neutral-150 gap-4">
+                <div className="flex flex-col sm:flex-row items-center justify-between pt-6 border-t border-neutral-200 gap-4">
                   <div className="flex items-center gap-2 text-xs text-neutral-500">
                     <Shield className="w-4 h-4 text-green-600" />
                     <span>Data encrypted and processed safely</span>
@@ -398,7 +398,7 @@ export default function QuotePage() {
                 <div className="pt-4 flex gap-4">
                   <button
                     onClick={handleReset}
-                    className="px-5 py-2.5 border border-neutral-300 text-neutral-750 font-bold uppercase tracking-wider text-xs rounded-md hover:bg-neutral-100 transition-colors cursor-pointer"
+                    className="px-5 py-2.5 border border-neutral-300 text-neutral-700 font-bold uppercase tracking-wider text-xs rounded-md hover:bg-neutral-100 transition-colors cursor-pointer"
                   >
                     Submit Another Project
                   </button>

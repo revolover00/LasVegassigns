@@ -22,7 +22,7 @@ export default function ServiceInspectModal({ isOpen, onClose, service, onOpenQu
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 bg-black/60 backdrop-blur-xs"
+            className="fixed inset-0 bg-black/60 backdrop-blur-sm"
             id="service-modal-backdrop"
           />
 
@@ -52,7 +52,7 @@ export default function ServiceInspectModal({ isOpen, onClose, service, onOpenQu
                 <X className="w-5 h-5" />
               </button>
               <div className="absolute bottom-4 left-6 right-6 z-10 text-left">
-                <span className="text-[10px] font-bold text-orange-400 uppercase tracking-widest bg-orange-950/60 px-2 py-0.5 rounded-sm border border-orange-850">
+                <span className="text-[10px] font-bold text-orange-400 uppercase tracking-widest bg-orange-950/60 px-2 py-0.5 rounded-sm border border-orange-800">
                   Services Highlight
                 </span>
                 <h4 className="text-lg md:text-xl font-display font-bold text-white uppercase tracking-wide mt-1.5 leading-tight">
@@ -107,7 +107,7 @@ export default function ServiceInspectModal({ isOpen, onClose, service, onOpenQu
               </span>
               <button
                 onClick={() => onOpenQuote(service.id)}
-                className="bg-orange-600 hover:bg-orange-700 text-white font-display font-bold uppercase tracking-widest text-[11px] px-6 py-2.5 rounded-md transition-all active:scale-95 shadow-xs"
+                className="bg-orange-600 hover:bg-orange-700 text-white font-display font-bold uppercase tracking-widest text-[11px] px-6 py-2.5 rounded-md transition-all active:scale-95 shadow-sm"
                 id="service-modal-quote-btn"
               >
                 Get Custom Price Quote

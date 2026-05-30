@@ -45,9 +45,9 @@ export default function Footer({ onOpenQuote, onScrollToSection }: FooterProps =
   };
 
   return (
-    <footer className="bg-neutral-950 text-neutral-400" id="site-footer text-left">
+    <footer className="bg-neutral-950 text-neutral-400 text-left" id="site-footer">
       {/* Upper banner with newsletter-style design or CTA */}
-      <div className="border-b border-neutral-850 py-12 px-6">
+      <div className="border-b border-neutral-800 py-12 px-6">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-center md:text-left space-y-2">
             <span className="text-[10px] font-bold text-orange-500 uppercase tracking-widest block font-sans">
@@ -82,7 +82,7 @@ export default function Footer({ onOpenQuote, onScrollToSection }: FooterProps =
               src="/signslogo.png"
               alt="Las Vegas Sign Company Logo"
               referrerPolicy="no-referrer"
-              className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-103 brightness-100"
+              className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105 brightness-100"
               id="footer-logo-img"
             />
           </div>
@@ -114,7 +114,7 @@ export default function Footer({ onOpenQuote, onScrollToSection }: FooterProps =
 
         {/* Col 2: Services Quick Links */}
         <div className="space-y-4 text-left">
-          <h5 className="text-xs font-black text-neutral-250 uppercase tracking-widest border-b border-neutral-850 pb-2">
+          <h5 className="text-xs font-black text-neutral-200 uppercase tracking-widest border-b border-neutral-800 pb-2">
             Signage Solutions
           </h5>
           <ul className="space-y-2.5 text-xs font-sans">
@@ -168,7 +168,7 @@ export default function Footer({ onOpenQuote, onScrollToSection }: FooterProps =
 
         {/* Col 3: Partners & Alliances */}
         <div className="space-y-4 text-left">
-          <h5 className="text-xs font-black text-neutral-250 uppercase tracking-widest border-b border-neutral-850 pb-2">
+          <h5 className="text-xs font-black text-neutral-200 uppercase tracking-widest border-b border-neutral-800 pb-2">
             National Network
           </h5>
           <ul className="space-y-2.5 text-xs font-sans">
@@ -213,7 +213,7 @@ export default function Footer({ onOpenQuote, onScrollToSection }: FooterProps =
 
         {/* Col 4: Legislation & Permits */}
         <div className="space-y-4 text-left">
-          <h5 className="text-xs font-black text-neutral-255 uppercase tracking-widest border-b border-neutral-850 pb-2">
+          <h5 className="text-xs font-black text-neutral-200 uppercase tracking-widest border-b border-neutral-800 pb-2">
             Legal &amp; Policy
           </h5>
           <ul className="space-y-2.5 text-xs font-sans">
@@ -258,7 +258,7 @@ export default function Footer({ onOpenQuote, onScrollToSection }: FooterProps =
       </div>
 
       {/* Bottom copyright details */}
-      <div className="bg-neutral-980 text-[10px] text-neutral-600 py-6 px-6 border-t border-neutral-900 font-sans">
+      <div className="bg-neutral-950 text-[10px] text-neutral-600 py-6 px-6 border-t border-neutral-900 font-sans">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
           <p>
             &copy; {currentYear} Las Vegas Sign Company. All rights reserved. Delivering Nationwide across all 50 US States.
@@ -280,7 +280,7 @@ export default function Footer({ onOpenQuote, onScrollToSection }: FooterProps =
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setInfoDialog(null)}
-              className="fixed inset-0 bg-black/65 backdrop-blur-xs"
+              className="fixed inset-0 bg-black/65 backdrop-blur-sm"
             />
             <motion.div
               initial={{ opacity: 0, scale: 0.95, y: 15 }}

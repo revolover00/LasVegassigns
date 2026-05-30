@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
-import { Menu, X, Phone, Award, Sparkles, Building2, Map } from 'lucide-react';
+import { Phone, Map } from 'lucide-react';
 
 interface HeaderProps {
   onOpenQuote?: (initialType?: string) => void;
@@ -10,7 +10,6 @@ interface HeaderProps {
 }
 
 export default function Header({ onOpenQuote, onScrollToSection, onSelectServiceDirectly }: HeaderProps = {}) {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isPhonePopupOpen, setIsPhonePopupOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
@@ -21,30 +20,12 @@ export default function Header({ onOpenQuote, onScrollToSection, onSelectService
     { label: 'Services', path: '/services' },
   ];
 
-  const servicesDropdownItems = [
-    { label: 'Aluminum Signs', id: 'aluminum-signs' },
-    { label: 'Monument Signs', id: 'monument-signs' },
-    { label: 'Lobby Signs', id: 'lobby-signs' },
-    { label: 'Window Graphics', id: 'window-graphics' },
-  ];
-
-  const handleServiceClick = (serviceId: string) => {
-    setIsMobileMenuOpen(false);
-    if (onSelectServiceDirectly) {
-      onSelectServiceDirectly(serviceId);
-    } else {
-      navigate('/services', { state: { serviceId } });
-    }
-  };
-
   const handleNavClick = (path: string) => {
-    setIsMobileMenuOpen(false);
     navigate(path);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handleQuoteClick = () => {
-    setIsMobileMenuOpen(false);
     if (onOpenQuote) {
       onOpenQuote();
     } else {
@@ -53,7 +34,7 @@ export default function Header({ onOpenQuote, onScrollToSection, onSelectService
   };
 
   return (
-    <header className="sticky top-0 z-40 w-full bg-white border-b border-neutral-200 shadow-xs" id="site-header">
+    <header className="sticky top-0 z-40 w-full bg-white border-b border-neutral-200 shadow-sm" id="site-header">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between relative gap-4">
         {/* Logo left */}
         <div
@@ -65,7 +46,7 @@ export default function Header({ onOpenQuote, onScrollToSection, onSelectService
             src="/signslogo.png"
             alt="Las Vegas Sign Company Logo"
             referrerPolicy="no-referrer"
-            className="h-10 sm:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-103"
+            className="h-10 sm:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
             id="header-logo-img"
           />
         </div>
@@ -100,7 +81,7 @@ export default function Header({ onOpenQuote, onScrollToSection, onSelectService
             title="View on Google Maps"
             id="maps-icon-btn"
           >
-            <Map className="w-4 h-4 sm:w-5 h-5" />
+            <Map className="w-4 h-4 sm:w-5 sm:h-5" />
           </a>
 
           {/* Phone call trigger */}
