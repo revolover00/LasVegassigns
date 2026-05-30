@@ -61,7 +61,7 @@ export default function Footer({ onOpenQuote, onScrollToSection }: FooterProps =
             </p>
           </div>
           <button
-            onClick={() => onOpenQuote ? onOpenQuote() : handleNavigation('/quote')}
+            onClick={() => handleNavigation('/quote')}
             className="flex-shrink-0 bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-500 hover:to-red-500 text-white font-display font-extrabold uppercase tracking-widest text-[11px] px-8 py-4 rounded-md transition-all active:scale-95 shadow-lg shadow-orange-950/40 cursor-pointer"
             id="footer-cta-quote-btn"
           >

@@ -239,7 +239,7 @@ export default function GalleryPage() {
                   transition={{ duration: 0.35, ease: "easeInOut" }}
                   key={item.id}
                   onClick={() => setActivePortfolioItem(item)}
-                  className="group bg-white rounded-xl border border-neutral-200 overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-orange-600/5 hover:border-orange-500/30 hover:-translate-y-2 transition-all duration-300 ease-out cursor-pointer flex flex-col"
+                  className="group bg-white rounded-xl border border-neutral-200 overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-orange-600/5 hover:border-orange-500/30 hover:-translate-y-2 hover:scale-[1.03] transition-all duration-300 ease-out cursor-pointer flex flex-col"
                   id={`portfolio-card-${item.id}`}
                 >
                   <div className="relative aspect-4/3 overflow-hidden bg-neutral-900/95 flex-shrink-0 flex items-center justify-center border-b border-neutral-100">

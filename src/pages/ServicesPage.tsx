@@ -71,7 +71,7 @@ export default function ServicesPage() {
               transition={{ duration: 0.4, delay: index * 0.08 }}
               key={service.id}
               onClick={() => handleInspectService(service)}
-              className="group bg-zinc-950 rounded-lg border border-neutral-800 hover:border-orange-500/80 overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-orange-600/10 hover:-translate-y-2 transition-all duration-300 ease-out cursor-pointer flex flex-col"
+              className="group bg-zinc-950 rounded-lg border border-neutral-800 hover:border-orange-500/80 overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-orange-600/10 hover:-translate-y-2 hover:scale-[1.03] transition-all duration-300 ease-out cursor-pointer flex flex-col"
               id={`service-card-${service.id}`}
             >
               <div className="relative h-48 overflow-hidden bg-neutral-950 flex-shrink-0 flex items-center justify-center border-b border-zinc-800">

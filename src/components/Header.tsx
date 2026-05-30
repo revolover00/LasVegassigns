@@ -26,11 +26,8 @@ export default function Header({ onOpenQuote, onScrollToSection, onSelectService
   };
 
   const handleQuoteClick = () => {
-    if (onOpenQuote) {
-      onOpenQuote();
-    } else {
-      navigate('/quote');
-    }
+    navigate('/quote');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (

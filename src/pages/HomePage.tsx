@@ -25,11 +25,8 @@ export default function HomePage({ handleOpenQuote }: any) {
   ];
 
   const handleCTAQuote = () => {
-    if (handleOpenQuote) {
-      handleOpenQuote();
-    } else {
-      navigate('/quote');
-    }
+    navigate('/quote');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
@@ -175,7 +172,7 @@ export default function HomePage({ handleOpenQuote }: any) {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-[-40px]" id="trust-banner">
         <div className="bg-white rounded-2xl shadow-2xl shadow-neutral-200/50 p-8 md:p-10 border border-neutral-200 grid grid-cols-1 sm:grid-cols-3 gap-8 divide-y sm:divide-y-0 sm:divide-x divide-neutral-200">
-          <div className="flex gap-4 items-start p-2 text-left group transition-all duration-300 hover:-translate-y-1.5 cursor-default">
+          <div className="flex gap-4 items-start p-2 text-left group transition-all duration-300 hover:-translate-y-1.5 hover:scale-[1.03] cursor-default">
             <div className="bg-orange-50 p-3 rounded-lg text-orange-600 flex-shrink-0 transition-colors duration-300 group-hover:bg-orange-600 group-hover:text-white">
               <ShieldCheck className="w-6 h-6" />
             </div>
@@ -189,7 +186,7 @@ export default function HomePage({ handleOpenQuote }: any) {
             </div>
           </div>
 
-          <div className="flex gap-4 items-start sm:pl-6 p-2 text-left group transition-all duration-300 hover:-translate-y-1.5 cursor-default">
+          <div className="flex gap-4 items-start sm:pl-6 p-2 text-left group transition-all duration-300 hover:-translate-y-1.5 hover:scale-[1.03] cursor-default">
             <div className="bg-orange-50 p-3 rounded-lg text-orange-600 flex-shrink-0 transition-colors duration-300 group-hover:bg-orange-600 group-hover:text-white">
               <Hammer className="w-6 h-6" />
             </div>
@@ -203,7 +200,7 @@ export default function HomePage({ handleOpenQuote }: any) {
             </div>
           </div>
 
-          <div className="flex gap-4 items-start sm:pl-6 p-2 text-left group transition-all duration-300 hover:-translate-y-1.5 cursor-default">
+          <div className="flex gap-4 items-start sm:pl-6 p-2 text-left group transition-all duration-300 hover:-translate-y-1.5 hover:scale-[1.03] cursor-default">
             <div className="bg-orange-50 p-3 rounded-lg text-orange-600 flex-shrink-0 transition-colors duration-300 group-hover:bg-orange-600 group-hover:text-white">
               <Clock className="w-6 h-6" />
             </div>
@@ -235,7 +232,7 @@ export default function HomePage({ handleOpenQuote }: any) {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {/* Services Teaser Card */}
-          <div className="group bg-white p-8 rounded-xl border border-neutral-200 shadow-sm text-left flex flex-col justify-between hover:shadow-2xl hover:shadow-orange-600/5 hover:border-orange-500/40 hover:-translate-y-2 transition-all duration-300 ease-out">
+          <div className="group bg-white p-8 rounded-xl border border-neutral-200 shadow-sm text-left flex flex-col justify-between hover:shadow-2xl hover:shadow-orange-600/5 hover:border-orange-500/40 hover:-translate-y-2 hover:scale-[1.03] transition-all duration-300 ease-out">
             <div>
               <div className="text-4xl mb-4 transform duration-300 group-hover:scale-115 group-hover:rotate-3 origin-left inline-block">🏬</div>
               <h3 className="text-lg font-display font-bold uppercase tracking-wide text-neutral-950 group-hover:text-orange-600 transition-colors duration-200">
@@ -255,7 +252,7 @@ export default function HomePage({ handleOpenQuote }: any) {
           </div>
 
           {/* Gallery Teaser Card */}
-          <div className="group bg-white p-8 rounded-xl border border-neutral-200 shadow-sm text-left flex flex-col justify-between hover:shadow-2xl hover:shadow-orange-600/5 hover:border-orange-500/40 hover:-translate-y-2 transition-all duration-300 ease-out">
+          <div className="group bg-white p-8 rounded-xl border border-neutral-200 shadow-sm text-left flex flex-col justify-between hover:shadow-2xl hover:shadow-orange-600/5 hover:border-orange-500/40 hover:-translate-y-2 hover:scale-[1.03] transition-all duration-300 ease-out">
             <div>
               <div className="text-4xl mb-4 transform duration-300 group-hover:scale-115 group-hover:-rotate-3 origin-left inline-block">🌟</div>
               <h3 className="text-lg font-display font-bold uppercase tracking-wide text-neutral-950 group-hover:text-orange-600 transition-colors duration-200">
@@ -299,19 +296,19 @@ export default function HomePage({ handleOpenQuote }: any) {
 
           {/* Metrics of scale */}
           <div className="pt-6 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto text-neutral-900 font-sans" id="about-metrics">
-            <div className="group p-4 bg-neutral-50 rounded-lg border border-neutral-200 text-center transition-all duration-300 hover:bg-neutral-900 hover:border-neutral-900 hover:shadow-xl hover:shadow-neutral-950/10 hover:-translate-y-1.5 cursor-default">
+            <div className="group p-4 bg-neutral-50 rounded-lg border border-neutral-200 text-center transition-all duration-300 hover:bg-neutral-900 hover:border-neutral-900 hover:scale-[1.03] hover:shadow-xl hover:shadow-neutral-950/10 hover:-translate-y-1.5 cursor-default">
               <span className="block font-display text-2xl font-black text-orange-600 transition-colors duration-300 group-hover:text-orange-500">100%</span>
               <span className="block text-[10px] font-bold text-neutral-500 uppercase tracking-wider mt-0.5 transition-colors duration-300 group-hover:text-neutral-300">USA-Manufactured</span>
             </div>
-            <div className="group p-4 bg-neutral-50 rounded-lg border border-neutral-200 text-center transition-all duration-300 hover:bg-neutral-900 hover:border-neutral-900 hover:shadow-xl hover:shadow-neutral-950/10 hover:-translate-y-1.5 cursor-default">
+            <div className="group p-4 bg-neutral-50 rounded-lg border border-neutral-200 text-center transition-all duration-300 hover:bg-neutral-900 hover:border-neutral-900 hover:scale-[1.03] hover:shadow-xl hover:shadow-neutral-950/10 hover:-translate-y-1.5 cursor-default">
               <span className="block font-display text-2xl font-black text-orange-600 transition-colors duration-300 group-hover:text-orange-500">5-Star</span>
               <span className="block text-[10px] font-bold text-neutral-500 uppercase tracking-wider mt-0.5 transition-colors duration-300 group-hover:text-neutral-300">Nationwide Service</span>
             </div>
-            <div className="group p-4 bg-neutral-50 rounded-lg border border-neutral-200 text-center transition-all duration-300 hover:bg-neutral-900 hover:border-neutral-900 hover:shadow-xl hover:shadow-neutral-950/10 hover:-translate-y-1.5 cursor-default">
+            <div className="group p-4 bg-neutral-50 rounded-lg border border-neutral-200 text-center transition-all duration-300 hover:bg-neutral-900 hover:border-neutral-900 hover:scale-[1.03] hover:shadow-xl hover:shadow-neutral-950/10 hover:-translate-y-1.5 cursor-default">
               <span className="block font-display text-2xl font-black text-orange-600 transition-colors duration-300 group-hover:text-orange-500">15+ Yrs</span>
               <span className="block text-[10px] font-bold text-neutral-500 uppercase tracking-wider mt-0.5 transition-colors duration-300 group-hover:text-neutral-300">Engineering History</span>
             </div>
-            <div className="group p-4 bg-neutral-50 rounded-lg border border-neutral-200 text-center transition-all duration-300 hover:bg-neutral-900 hover:border-neutral-900 hover:shadow-xl hover:shadow-neutral-950/10 hover:-translate-y-1.5 cursor-default">
+            <div className="group p-4 bg-neutral-50 rounded-lg border border-neutral-200 text-center transition-all duration-300 hover:bg-neutral-900 hover:border-neutral-900 hover:scale-[1.03] hover:shadow-xl hover:shadow-neutral-950/10 hover:-translate-y-1.5 cursor-default">
               <span className="block font-display text-2xl font-black text-orange-600 transition-colors duration-300 group-hover:text-orange-500">Free</span>
               <span className="block text-[10px] font-bold text-neutral-500 uppercase tracking-wider mt-0.5 transition-colors duration-300 group-hover:text-neutral-300">Prepress Proofing</span>
             </div>
