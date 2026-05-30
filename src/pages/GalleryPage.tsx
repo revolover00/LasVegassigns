@@ -6,6 +6,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { portfolioData } from '../data';
 import { PortfolioItem } from '../types';
+import useSEO from '../hooks/useSEO';
 
 const PORTFOLIO_CATEGORIES = [
   { name: 'All', emoji: '🌟' },
@@ -28,6 +29,13 @@ export default function GalleryPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [portfolioSearch, setPortfolioSearch] = useState('');
   const [isCategoriesExpanded, setIsCategoriesExpanded] = useState(false);
+
+  useSEO({
+    title: 'Our Custom Sign Portfolio & Gallery | Las Vegas Sign Company',
+    description: 'Explore our extensive gallery of custom fabricated business signs, 3D lobby directories, corporate monument towers, window vinyls, and architectural retail markers.',
+    canonicalPath: '/gallery',
+    keywords: 'sign gallery, portfolio, custom signage, monument signs, lobby directories, commercial signs gallery'
+  });
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' });

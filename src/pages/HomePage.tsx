@@ -5,10 +5,18 @@ import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import AnimatedCounter from '../components/AnimatedCounter';
+import useSEO from '../hooks/useSEO';
 
 export default function HomePage({ handleOpenQuote }: any) {
   const navigate = useNavigate();
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
+
+  useSEO({
+    title: 'Las Vegas Sign Company | Custom Commercial Signage & Manufacturing',
+    description: 'Las Vegas Sign Company designs, manufactures, and ships premium zoning-compliant signs, architectural lobby markers, massive pylons & monument structures nationwide.',
+    canonicalPath: '/',
+    keywords: 'custom signs, business signs, commercial signage, sign manufacturer, dimensional letters, lobby markers, shipping signs, pylon signs'
+  });
 
   const faqs = [
     {

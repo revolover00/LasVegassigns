@@ -4,10 +4,18 @@ import { Upload, CheckCircle2, Shield, Loader2, FileText, Check, Sparkles, X } f
 import { useLocation, useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import useSEO from '../hooks/useSEO';
 
 export default function QuotePage() {
   const location = useLocation();
   const navigate = useNavigate();
+
+  useSEO({
+    title: 'Request a Free Commercial Signage Quote | Las Vegas Sign Company',
+    description: 'Submit your commercial signage specifications and blueprint attachments to receive an accurate, zoning-compliant, and fully engineered custom price quote.',
+    canonicalPath: '/quote',
+    keywords: 'sign quote, free custom quote, business signage estimate, neon sign pricing, commercial sign build estimate'
+  });
 
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');

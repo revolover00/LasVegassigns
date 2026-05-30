@@ -7,12 +7,20 @@ import Footer from '../components/Footer';
 import ServiceInspectModal from '../components/ServiceInspectModal';
 import { servicesData } from '../data';
 import { ServiceItem } from '../types';
+import useSEO from '../hooks/useSEO';
 
 export default function ServicesPage() {
   const navigate = useNavigate();
   const location = useLocation();
   const [isServiceInspectOpen, setIsServiceInspectOpen] = useState(false);
   const [inspectedService, setInspectedService] = useState<ServiceItem | null>(null);
+
+  useSEO({
+    title: 'Professional Sign Manufacturing Services | Las Vegas Sign Company',
+    description: 'Explore our specialized industrial custom signs fabrication services including aluminum signs, 3D corporate branding logos, sandblasted wooden signs, and structural high-wind monument designs.',
+    canonicalPath: '/services',
+    keywords: 'custom signage fabrication, sign building, monument construction, window decaling, commercial signs engineering'
+  });
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' });
