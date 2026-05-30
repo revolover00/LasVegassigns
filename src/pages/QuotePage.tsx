@@ -160,38 +160,10 @@ export default function QuotePage() {
                   </div>
                 )}
 
-                {/* Sign Specifications */}
-                <div className="space-y-4">
-                  <h4 className="text-xs font-black uppercase tracking-widest text-neutral-400 border-b border-neutral-200 pb-2">
-                    1. Select Sign Category
-                  </h4>
-                  <div>
-                    <label className="block text-xs font-semibold uppercase tracking-wider text-neutral-600 mb-1.5">
-                      What Category of Sign are you looking for?
-                    </label>
-                    <select
-                      value={selectedSignType}
-                      onChange={(e) => setSelectedSignType(e.target.value)}
-                      className="w-full px-3 py-2.5 border border-neutral-300 rounded-md text-sm bg-neutral-50 font-bold focus:outline-hidden focus:border-orange-500 focus:ring-1 focus:ring-orange-500 text-neutral-800"
-                    >
-                      <option value="Aluminum Signs">Aluminum Signs</option>
-                      <option value="Apartment Signs">Apartment Signs</option>
-                      <option value="Billboard Sign Refacing">Billboard Sign Refacing</option>
-                      <option value="Custom Metal Signs">Custom Metal Signs</option>
-                      <option value="Custom Wall Logo Signs">Custom Wall Logo Signs</option>
-                      <option value="Interior Lobby Signs">Interior Lobby Signs</option>
-                      <option value="Lobby Directory Signs">Lobby Directory Signs</option>
-                      <option value="Monument Signs">Monument Signs</option>
-                      <option value="Parking Lot Sign Posts">Parking Lot Sign Posts</option>
-                      <option value="Window Graphics">Window Graphics</option>
-                    </select>
-                  </div>
-                </div>
-
                 {/* Contact Info */}
                 <div className="space-y-4">
                   <h4 className="text-xs font-black uppercase tracking-widest text-neutral-400 border-b border-neutral-200 pb-2">
-                    2. Contact Information
+                    1. Contact Information
                   </h4>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -260,7 +232,7 @@ export default function QuotePage() {
                 {/* Upload Files */}
                 <div className="space-y-4">
                   <h4 className="text-xs font-black uppercase tracking-widest text-neutral-400 border-b border-neutral-200 pb-2">
-                    3. Upload Your Files (optional)
+                    2. Upload Your Files (optional)
                   </h4>
                   <p className="text-[11px] text-neutral-500">
                     Upload your project blueprint files or design templates to speed up our engineering evaluation.
