@@ -13,6 +13,7 @@ export default function QuotePage() {
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
+  const [validationError, setValidationError] = useState('');
   
   // Sign specifications prefilled from gallery or services state
   const [selectedSignType, setSelectedSignType] = useState('Aluminum Signs');
@@ -75,10 +76,10 @@ export default function QuotePage() {
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     if (!firstName || !lastName || !email || !phone) {
-      alert('Please fill in First Name, Last Name, Email, and Phone.');
+      setValidationError('Please fill in all required contact details: First Name, Last Name, Email, and Phone.');
       return;
     }
-    
+    setValidationError('');
     setIsSubmitting(true);
     
     // Simulate API upload
@@ -93,6 +94,7 @@ export default function QuotePage() {
     setLastName('');
     setEmail('');
     setPhone('');
+    setValidationError('');
     setSelectedSignType('Aluminum Signs');
     setUploadedFiles([]);
     setIsSuccess(false);
@@ -149,6 +151,14 @@ export default function QuotePage() {
                     🛠️ <span className="font-bold text-orange-950">Nationwide Shipping &amp; Compliance Guaranteed:</span> Everything we build is packaged with tailored mounting layouts and complies with your local zoning laws, sign codes, and structural wind-load requirements in all 50 US states.
                   </p>
                 </div>
+
+                {validationError && (
+                  <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded-r-md">
+                    <p className="text-xs text-red-800 font-bold">
+                      ⚠️ {validationError}
+                    </p>
+                  </div>
+                )}
 
                 {/* Sign Specifications */}
                 <div className="space-y-4">

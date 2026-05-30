@@ -1,5 +1,7 @@
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Building2, Sparkles, Phone, Mail, MapPin } from 'lucide-react';
+import { motion, AnimatePresence } from 'motion/react';
+import { Building2, Sparkles, Phone, Mail, MapPin, X, Shield, Globe } from 'lucide-react';
 
 interface FooterProps {
   onOpenQuote?: () => void;
@@ -9,13 +11,32 @@ interface FooterProps {
 export default function Footer({ onOpenQuote, onScrollToSection }: FooterProps = {}) {
   const currentYear = new Date().getFullYear();
   const navigate = useNavigate();
+  const [infoDialog, setInfoDialog] = useState<{ title: string; content: string; type: 'partner' | 'policy' } | null>(null);
 
   const handlePartnerLink = (partner: string) => {
-    alert(`Rerouting to verified partner portal: "${partner}"`);
+    const infoMap: Record<string, string> = {
+      'National Building Code Alliance': 'Our general contractor network partners with certified local engineers and building code experts to review structural concrete footers, local zoning ordinances, and electrical feeds for heavy exterior signs.',
+      'United Signage Association': 'We coordinate within the National Signage Guild to align materials supply chains, guarantee metal standards (H32 marine-grade alloys), and follow cutting-edge fabrication advancements.',
+      'National Zoning & Design Council': 'We work diligently with municipal developers, surveyors, and county inspectors to clear sign dimensions, setback ratios, and street safety clearance rules across all 50 states.',
+      'National Steel Erectors Union': 'For major rigging projects like regional pylons, hotel signs, or complex building-front frameworks, we dispatch and coordinate licensed local union crane crews.'
+    };
+    
+    const content = infoMap[partner] || `Verified alliance registry supporting localized general construction operations for our commercial business signage systems.`;
+    setInfoDialog({ title: partner, content, type: 'partner' });
   };
 
   const handlePolicyLink = (policy: string) => {
-    alert(`Regulatory standard legal text: "${policy}" disclosure model.`);
+    const infoMap: Record<string, string> = {
+      'Privacy Policy': 'Your proprietary blueprint files, vector logo assets (.ai, .eps, .dxf), site photos, and contact metrics are guarded under strict enterprise-grade security. Las Vegas Sign Company guarantees all client artwork is utilized solely for private CNC pathing and scale modeling.',
+      'Terms & Conditions': 'All custom signage layouts, acrylic structures, and welded metal posts are fully customized to clients specification requirements. Physical production begins immediately upon layout proof approval. High-wind guarantees apply to all structural steel assemblies.',
+      'National Contractor Licensing Disclosures': 'Las Vegas Sign Company designs, packages, and supplies engineering-stamped hardware to all 50 states. Local installation, concrete pouring, and final connection rigging are executed under authorized local licensed specialists adhering to municipal safety conditions.',
+      'Accessibility Sign Codes (ADA)': 'Our ADA-compliant tactile structures feature grade II sub-beaded braille lettering, exact 1/32-inch raised characters, high contrast satin backgrounds, and standard architectural mounting heights to satisfy state inspects perfectly.',
+      'Terms': 'Our customer agreements emphasize clear design signoffs, verified vector paths, upfront hardware estimates, and fast insured global shipping.',
+      'Privacy': 'Your personal details, phone dispatch lines, and corporate metrics are encrypted. We never lease or sell client profiles to retail marketing lists.'
+    };
+    
+    const content = infoMap[policy] || `Official legal disclosure and regulatory guidelines. Contact our dispatch office for certified copys of local documentation.`;
+    setInfoDialog({ title: policy, content, type: 'policy' });
   };
 
   const handleNavigation = (path: string, state?: any) => {
@@ -249,6 +270,55 @@ export default function Footer({ onOpenQuote, onScrollToSection }: FooterProps =
           </div>
         </div>
       </div>
+
+      {/* Dynamic Info Dialogue Modal */}
+      <AnimatePresence>
+        {infoDialog && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setInfoDialog(null)}
+              className="fixed inset-0 bg-black/65 backdrop-blur-xs"
+            />
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95, y: 15 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: 15 }}
+              className="relative w-full max-w-md bg-white text-neutral-900 rounded-lg p-6 shadow-2xl border border-neutral-200 z-10"
+              id="footer-info-dialog"
+            >
+              <div className="flex items-center justify-between border-b border-neutral-100 pb-3 mb-4">
+                <span className="flex items-center gap-2 font-display font-medium text-xs uppercase tracking-widest text-orange-600">
+                  {infoDialog.type === 'partner' ? <Globe className="w-4 h-4" /> : <Shield className="w-4 h-4" />}
+                  <span>{infoDialog.type === 'partner' ? 'Alliance Resource' : 'Legal Disclosure'}</span>
+                </span>
+                <button
+                  onClick={() => setInfoDialog(null)}
+                  className="text-neutral-400 hover:text-neutral-900 p-1 rounded-sm hover:bg-neutral-100 transition-colors"
+                >
+                  <X className="w-4 h-4" />
+                </button>
+              </div>
+              <h4 className="text-sm font-sans font-black uppercase tracking-wider text-neutral-950 mb-2">
+                {infoDialog.title}
+              </h4>
+              <p className="text-xs text-neutral-600 leading-relaxed">
+                {infoDialog.content}
+              </p>
+              <div className="mt-5 flex justify-end">
+                <button
+                  onClick={() => setInfoDialog(null)}
+                  className="bg-neutral-900 hover:bg-orange-600 text-white font-sans text-[11px] font-bold uppercase tracking-wider px-4 py-2 rounded-sm transition-colors cursor-pointer"
+                >
+                  Understood
+                </button>
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     </footer>
   );
 }
