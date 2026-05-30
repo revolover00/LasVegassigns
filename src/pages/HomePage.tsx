@@ -4,6 +4,7 @@ import { ArrowRight, Sparkles, ShieldCheck, Hammer, Clock, HelpCircle } from 'lu
 import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import AnimatedCounter from '../components/AnimatedCounter';
 
 export default function HomePage({ handleOpenQuote }: any) {
   const navigate = useNavigate();
@@ -297,19 +298,33 @@ export default function HomePage({ handleOpenQuote }: any) {
           {/* Metrics of scale */}
           <div className="pt-6 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto text-neutral-900 font-sans" id="about-metrics">
             <div className="group p-4 bg-neutral-50 rounded-lg border border-neutral-200 text-center transition-all duration-300 hover:bg-neutral-900 hover:border-neutral-900 hover:scale-[1.03] hover:shadow-xl hover:shadow-neutral-950/10 hover:-translate-y-1.5 cursor-default">
-              <span className="block font-display text-2xl font-black text-orange-600 transition-colors duration-300 group-hover:text-orange-500">100%</span>
+              <span className="block font-display text-2xl font-black text-orange-600 transition-colors duration-300 group-hover:text-orange-500">
+                <AnimatedCounter to={100} suffix="%" />
+              </span>
               <span className="block text-[10px] font-bold text-neutral-500 uppercase tracking-wider mt-0.5 transition-colors duration-300 group-hover:text-neutral-300">USA-Manufactured</span>
             </div>
             <div className="group p-4 bg-neutral-50 rounded-lg border border-neutral-200 text-center transition-all duration-300 hover:bg-neutral-900 hover:border-neutral-900 hover:scale-[1.03] hover:shadow-xl hover:shadow-neutral-950/10 hover:-translate-y-1.5 cursor-default">
-              <span className="block font-display text-2xl font-black text-orange-600 transition-colors duration-300 group-hover:text-orange-500">5-Star</span>
+              <span className="block font-display text-2xl font-black text-orange-600 transition-colors duration-300 group-hover:text-orange-500">
+                <AnimatedCounter to={5} suffix="-Star" />
+              </span>
               <span className="block text-[10px] font-bold text-neutral-500 uppercase tracking-wider mt-0.5 transition-colors duration-300 group-hover:text-neutral-300">Nationwide Service</span>
             </div>
             <div className="group p-4 bg-neutral-50 rounded-lg border border-neutral-200 text-center transition-all duration-300 hover:bg-neutral-900 hover:border-neutral-900 hover:scale-[1.03] hover:shadow-xl hover:shadow-neutral-950/10 hover:-translate-y-1.5 cursor-default">
-              <span className="block font-display text-2xl font-black text-orange-600 transition-colors duration-300 group-hover:text-orange-500">15+ Yrs</span>
+              <span className="block font-display text-2xl font-black text-orange-600 transition-colors duration-300 group-hover:text-orange-500">
+                <AnimatedCounter to={15} suffix="+ Yrs" />
+              </span>
               <span className="block text-[10px] font-bold text-neutral-500 uppercase tracking-wider mt-0.5 transition-colors duration-300 group-hover:text-neutral-300">Engineering History</span>
             </div>
             <div className="group p-4 bg-neutral-50 rounded-lg border border-neutral-200 text-center transition-all duration-300 hover:bg-neutral-900 hover:border-neutral-900 hover:scale-[1.03] hover:shadow-xl hover:shadow-neutral-950/10 hover:-translate-y-1.5 cursor-default">
-              <span className="block font-display text-2xl font-black text-orange-600 transition-colors duration-300 group-hover:text-orange-500">Free</span>
+              <motion.span 
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1.2, ease: "easeOut" }}
+                className="block font-display text-2xl font-black text-orange-600 transition-colors duration-300 group-hover:text-orange-500"
+              >
+                Free
+              </motion.span>
               <span className="block text-[10px] font-bold text-neutral-500 uppercase tracking-wider mt-0.5 transition-colors duration-300 group-hover:text-neutral-300">Prepress Proofing</span>
             </div>
           </div>
