@@ -99,12 +99,6 @@ export default function HomePage({ handleOpenQuote }: any) {
             className="max-w-3xl space-y-6 text-left"
             id="hero-content-block"
           >
-            {/* Voted Badge */}
-            <div className="inline-flex items-center gap-2 bg-orange-600/90 border border-orange-500 backdrop-blur-md text-white px-3.5 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-widest leading-none shadow-md w-fit mx-auto md:mx-0">
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>Top-Rated Nationwide Custom Signage Manufacturer</span>
-            </div>
-
             {/* Title display */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-black text-white uppercase tracking-tight leading-none drop-shadow-sm">
               ENGINEERED TO BE <span className="text-orange-500">VISIBLE</span>.
