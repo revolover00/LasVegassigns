@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://lasvegassigns.vercel.app/sitemap.xml

@@ -38,7 +38,7 @@ export default function useSEO({ title, description, canonicalPath = '', keyword
       ogDescription.setAttribute('content', description);
     }
 
-    // 5. Update Canonical URL
+    // 5. Update Canonical URL & OG URL (both pointing to the canonical / full URL)
     const canonical = document.querySelector('link[rel="canonical"]');
     const baseDomain = 'https://lasvegassigns.vercel.app';
     const cleanPath = canonicalPath.startsWith('/') ? canonicalPath : `/${canonicalPath}`;
@@ -51,6 +51,17 @@ export default function useSEO({ title, description, canonicalPath = '', keyword
       link.setAttribute('rel', 'canonical');
       link.setAttribute('href', fullCanonicalUrl);
       document.head.appendChild(link);
+    }
+
+    // Update og:url
+    const ogUrl = document.querySelector('meta[property="og:url"]');
+    if (ogUrl) {
+      ogUrl.setAttribute('content', fullCanonicalUrl);
+    } else {
+      const meta = document.createElement('meta');
+      meta.setAttribute('property', 'og:url');
+      meta.setAttribute('content', fullCanonicalUrl);
+      document.head.appendChild(meta);
     }
 
     // 6. Update Meta Keywords if provided
