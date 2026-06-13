@@ -1,58 +1,177 @@
-# Las Vegas Sign Company
 
-A modern, highly performant web application custom-designed and engineered for **Las Vegas Sign Company**. Featuring architectural corporate showrooms, specialized commercial category selectors, responsive drag-and-drop structural estimators, and customized sizing dialogs.
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0A0A0A,1A0A2E,2D1B4E,1A0A2E&height=200&section=header"/>
+</div>
 
-Designed and developed by **Revo Code**.
+<br/>
+
+<div align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Inter&size=28&duration=3000&pause=800&color=FFD700&center=true&vCenter=true&width=600&lines=LAS+VEGAS+SIGNS;Neon+Typography+Engine;Make+It+Glow" alt="Typing SVG"/>
+</div>
+
+<br/>
+
+<div align="center">
+  <img src="https://img.shields.io/badge/▸_STATUS_◂-LIVE-FFD700?style=for-the-badge&logoColor=white&labelColor=0A0A0A"/>
+  <img src="https://img.shields.io/badge/▸_VERSION_◂-1.0.0-FFD700?style=for-the-badge&labelColor=0A0A0A"/>
+  <img src="https://img.shields.io/badge/▸_LICENSE_◂-MIT-FFD700?style=for-the-badge&labelColor=0A0A0A"/>
+  <img src="https://img.shields.io/github/stars/revolover00/LasVegassigns?style=for-the-badge&logo=github&logoColor=FFD700&color=FFD700&labelColor=0A0A0A&label=▸_STARS_◂"/>
+</div>
+
+<br/>
+
+<div align="center">
+  <img src="https://img.shields.io/badge/TypeScript-0A0A0A?style=for-the-badge&logo=typescript&logoColor=white&labelColor=FFD700"/>
+  <img src="https://img.shields.io/badge/React-0A0A0A?style=for-the-badge&logo=react&logoColor=white&labelColor=FFD700"/>
+  <img src="https://img.shields.io/badge/Vite-0A0A0A?style=for-the-badge&logo=vite&logoColor=white&labelColor=FFD700"/>
+  <img src="https://img.shields.io/badge/Gemini_AI-0A0A0A?style=for-the-badge&logo=google&logoColor=white&labelColor=FFD700"/>
+</div>
 
 ---
 
-## 🚀 Key Features
+### ◈ THE VISION
 
-* **Custom Commercial Signage Portfolio**: Showcases real assemblies across 10 core distinct categories including Anodized Aluminum, Lobby Glass Directorys, Pylon Columns, and Window Decals.
-* **Interactive Sizing Inspector**: Dynamic specs detailing structural US wind-loads, material grades (such as Marine Alloy H32), and zoning-compliance details.
-* **Granular Architectural Estimator**: Robust file uploader supporting high-fidelity engineering vector blueprints (`.ai`, `.eps`, `.dxf`, `.pdf`, `.png`, `.jpg`).
-* **Fluid Animation Profiles**: Immersive transitions and modals backed by custom `motion` presets for clean, distraction-free user flow.
-* **Deployment Ready**: Fully configured with SPA routes fallback mechanisms optimized for immediate hosting on **Vercel** or traditional Node containers.
+| | |
+|---|---|
+| 🎰 | **Neon · Bold · Iconic** |
+| 🌵 | Las Vegas energy · Digital signage · American retro-future |
+| 💡 | **LAS VEGAS SIGNS** generates glowing, attention-grabbing text styles inspired by the neon-lit boulevards of the Entertainment Capital of the World. |
 
 ---
 
-## 🛠️ Local Development Setup
+### ◈ SIGN STYLES
 
-Follow these simple guidelines to boot the environment locally on your terminal:
+| ICON | STYLE | GLOW | BEST FOR |
+|:----:|:------|:----:|:---------|
+| 🎰 | CASINO | Gold | Headlines · Logos |
+| 🌵 | ROADSIDE | White | Billboards · Banners |
+| 💃 | SHOWGIRL | Pink | Posters · Flyers |
+| 🃏 | POKER | Green | Gaming · Cards |
+| 🎲 | CRAPS | Purple | Nightclubs · Events |
+| 🎸 | ROCK | Red | Concerts · Bands |
+| 🌴 | RETRO | Orange | Vintage · T-shirts |
+| ⚡ | HIGH ROLLER | Cyan | Luxury · VIP |
 
-### 1. Prerequisites
-Ensure you have **Node.js** (v18 or higher) installed on your system.
+---
 
-### 2. Installation
-Clone the repository and install the production-grade dependencies:
-```bash
+### ◈ HOW IT WORKS
+
+   [TEXT INPUT]  →  [STYLE SELECT]  →  [AI GENERATE]  →  [GLOW OUTPUT]
+        ↓                ↓                  ↓                  ↓
+    Your words     Pick a vibe       Gemini AI        Neon text ready
+
+---
+
+### ◈ TECH STACK
+
+| CATEGORY | TECHNOLOGY |
+|:---------|:-----------|
+| Core | TypeScript · React · Vite |
+| AI Engine | Google Gemini API 2.0 |
+| Styling | TailwindCSS · shadcn/ui |
+| Effects | CSS box-shadow · text-shadow · neon keyframes |
+| Deployment | Vercel · AI Studio |
+
+---
+
+### ◈ QUICK START
+
+# Clone the repository
+git clone https://github.com/revolover00/LasVegassigns.git
+
+# Enter project
+cd LasVegassigns
+
+# Install dependencies
 npm install
-```
 
-### 3. Run Development Server
-Spin up the local client application under hot-reloading configurations:
-```bash
+# Set up Gemini API key
+echo "GEMINI_API_KEY=your_key_here" > .env.local
+
+# Run development server
 npm run dev
-```
-The server will boot up and expose the interface immediately.
 
-### 4. Direct Production Build
-To compile the static assets optimized with structural minification for secure storage:
-```bash
+# Build for production
 npm run build
-```
 
 ---
 
-## 🌐 Deploy to Vercel
+### ◈ PROJECT STRUCTURE
 
-This repository has been configured with local rewrites inside `vercel.json` to handle React client-side routing securely.
-
-To deploy instantly via Vercel CLI:
-1. Install Vercel globally: `npm install -g vercel`
-2. Run `vercel` from the root directory and link your account.
-3. Done! Vercel will automatically parse standard SPA fallback scripts seamlessly without broken `/services` or `/gallery` routes.
+LASVEGASSIGNS/
+├── src/
+│   ├── components/
+│   │   ├── NeonSign.tsx       # Glow effect generator
+│   │   ├── StylePicker.tsx    # Style selector dropdown
+│   │   ├── Marquee.tsx        # Vegas-style ticker
+│   │   └── ui/                # shadcn/ui components
+│   ├── lib/
+│   │   ├── gemini.ts          # AI style transformer
+│   │   └── neonEffects.ts     # CSS glow utilities
+│   ├── styles/
+│   │   └── globals.css
+│   ├── App.tsx
+│   └── main.tsx
+├── public/
+├── .env.example
+├── index.html
+├── package.json
+├── vite.config.ts
+├── tailwind.config.js
+└── README.md
 
 ---
 
-*Handcrafted with absolute precision and engineering standards by **Revo Code**.*
+### ◈ PREVIEW
+
+<p align="center">
+  <a href="https://lasvegassigns.vercel.app" target="_blank">
+    <img src="https://via.placeholder.com/900x500/0A0A0A/FFD700?text=LAS+VEGAS+SIGNS+DEMO" alt="Preview" width="85%"/>
+  </a>
+  <br/>
+  <sub>✨ Click to see the neon glow in action ✨</sub>
+</p>
+
+---
+
+### ◈ STATS
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=revolover00&repo=LasVegassigns&theme=dark&bg_color=0A0A0A&border_color=FFD700&title_color=FFD700&text_color=AAAAAA&icon_color=FFD700"/>
+</p>
+
+---
+
+### ◈ ROADMAP
+
+| STATUS | FEATURE |
+|:------:|:--------|
+| ✅ | Casino Style (Gold Glow) |
+| ✅ | Roadside Style (White Glow) |
+| ✅ | Showgirl Style (Pink Glow) |
+| ✅ | Poker Style (Green Glow) |
+| ⬜ | Animated blinking effects |
+| ⬜ | Custom neon color picker |
+| ⬜ | SVG export |
+| ⬜ | Mobile app (React Native) |
+
+---
+
+<div align="center">
+  <samp>
+    <b>✦ WHAT HAPPENS IN VEGAS ✦</b><br/>
+    <b>✦ GETS STYLED IN THE REPO ✦</b>
+  </samp>
+</div>
+
+<br/>
+
+<div align="center">
+  <sub>Built with neon by <b>Baldwin · revolover00</b></sub>
+  <br/>
+  <sub>Egypt → Las Vegas Blvd → Worldwide</sub>
+</div>
+
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=FFD700,1A0A2E,0A0A0A,000000&height=120&section=footer"/>
+</div>
